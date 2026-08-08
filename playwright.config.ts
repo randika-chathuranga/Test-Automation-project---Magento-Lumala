@@ -1,5 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
 import process from 'process';
+import dotenv from 'dotenv';
+import path from 'path';
+
+
+//for loding the env file details for the test execution. The env file is located in the envs folder.
+dotenv.config({
+  path: path.resolve(__dirname, 'envs/.env.prod')
+});
+
 
 /**
  * Read environment variables from file.
@@ -31,6 +40,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    //run the browser open when the green run button is clicked in the test runner.
+    headless: false,
   },
 
   /* Configure projects for major browsers */

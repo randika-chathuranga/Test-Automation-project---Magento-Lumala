@@ -1,6 +1,17 @@
 {
     "urlSubstrings": {
-        "loginSuccessPage": "hr.demo.horilla.com/dashboard/"
+        "loginSuccessPage": "hr.demo.horilla.com/dashboard/",
+        "employeeViewPage": "/employee/employee-view/",
+        "attendanceViewPage": "/attendance/attendance-view/",
+        "leaveRequestViewPage": "/leave/request-view/",
+        "recruitmentViewPage": "/recruitment/recruitment-view/",
+        "holidayViewPage": "/configuration/holiday-view/",
+        "settingsPage": "/settings/",
+        "attendanceRequestPendingPage": "/attendance/request-attendance-view/",
+        "assetRequestPendingPage": "/asset/asset-request-allocation-view/",
+        "shiftRequestPendingPage": "/employee/shift-request-view/",
+        "workTypeRequestPendingPage": "/employee/work-type-request-view/",
+        "reimbursementPage": "/payroll/view-reimbursement/"
     }
 
 }

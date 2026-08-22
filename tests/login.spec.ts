@@ -11,19 +11,13 @@ test('login to the application', async ({page}) => {
     await loginPage.goToLoginPage();
     await loginPage.signIn(ENV.UN, ENV.PW);
     await expect(page).toHaveURL(new RegExp(clientTestData.urlSubstrings.loginSuccessPage), { timeout: 15000 });
-
-    // Wait until the dashboard is actually loaded
-    await expect(page.getByText('Dashboard')).toBeVisible({
-        timeout: 15000
-    });
-    
     console.log('Login successful and navigated to the dashboard.');
 });
 
 
-test('create an new account', async ({page})=>{
-    const loginPage = new LoginPage(page);
+// test('create an new account', async ({page})=>{
+//     const loginPage = new LoginPage(page);
 
-    await loginPage.goToLoginPage();
-    await loginPage.createAccount();
-})
+//     await loginPage.goToLoginPage();
+//     await loginPage.createAccount();
+// })

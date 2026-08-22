@@ -1,0 +1,143 @@
+DASHBOARD MODULE
+
+TC-002
+Verify Total Employee card is clickable and navigates to Employee page
+
+Expected:
+User should be redirected to the Employee view page, able to search for an employee and open their profile.
+
+-------------------------
+
+TC-003
+Verify Present Today card navigates to the Attendance page
+
+Expected:
+User should be redirected to the Attendance view page.
+
+-------------------------
+
+TC-004
+Verify On Leave card navigates to the Leave request page
+
+Expected:
+User should be redirected to the Leave request view page, filtered to today's approved leave.
+
+-------------------------
+
+TC-005
+Verify Open Recruitments card navigates to the Recruitment page
+
+Expected:
+User should be redirected to the Recruitment view page.
+
+-------------------------
+
+TC-006
+Verify This Month / Last Month / Quarter date presets update the dashboard
+
+Expected:
+Clicking a preset highlights it as active, clears the previous active preset, and populates the From/To date fields with the matching range.
+
+-------------------------
+
+TC-007
+Verify a custom From/To date range can be applied
+
+Expected:
+Manually setting From/To dates updates the fields and clears any active preset highlight.
+
+-------------------------
+
+TC-008
+Verify the Customize Dashboard panel opens and closes
+
+Expected:
+Clicking "Customize" opens a side panel listing each widget with a toggle, plus "Reset to default" and "Save" actions. Clicking the close (x) icon closes the panel.
+
+-------------------------
+
+TC-009
+Verify each Pending Approvals card (Leave, Attendance, Assets, Shift, Work Type, Reimbursements) navigates to its correct filtered page
+
+Expected:
+Each card navigates to the corresponding pending-approval list for that request type.
+
+-------------------------
+
+TC-010
+Verify the Settings icon navigates to the Settings page
+
+Expected:
+User should be redirected to /settings/.
+
+-------------------------
+
+TC-011
+Verify "On Leave Today" widget's "View all" link navigates to the Leave request page
+
+Expected:
+User should be redirected to the Leave request view page.
+
+-------------------------
+
+TC-012
+Verify "Upcoming Holidays" widget's "View all" link navigates to the Holidays page
+
+Expected:
+User should be redirected to the Holiday configuration page.
+
+-------------------------
+
+TC-013
+Verify the notification bell opens the notifications panel
+
+Expected:
+Clicking the bell icon opens a dropdown showing recent notifications (or "All Caught Up!" when there are none).
+
+-------------------------
+
+TC-014
+Verify the user menu shows the correct profile options
+
+Expected:
+Clicking the logged-in user's name/avatar opens a menu with "My Profile" and "Logout". "Change Username" and "Change Password" are disabled in the demo environment.
+
+-------------------------
+
+NOT AUTOMATED (manual/exploratory only - would mutate shared demo data)
+
+TC-015
+Check In button clocks the user in
+
+Note: skipped in automation because hr.demo.horilla.com is a shared public demo instance;
+clocking in changes the "Present Today" count for all users of the demo.
+
+-------------------------
+
+TC-016
+Saving changes in the Customize Dashboard panel persists the widget layout
+
+Note: skipped in automation for the same reason - "Save" would permanently change the
+shared admin account's dashboard layout for everyone using the demo.
+
+-------------------------
+
+TC-017
+Switching company in the building icon dropdown changes the selected company
+
+Note: skipped in automation - changes selected company context for the shared demo account.
+
+-------------------------
+
+TC-018
+Marking notifications as read / clearing notifications
+
+Note: skipped in automation - mutates shared notification state.
+
+-------------------------
+
+TC-019
+Toggling light/dark theme
+
+Note: low automation value (purely visual/cosmetic); consider only if theme persistence
+becomes a functional requirement.

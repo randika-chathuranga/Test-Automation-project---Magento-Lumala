@@ -4,52 +4,11 @@ TC-001
 Login with valid credentials
 
 Expected:
-Customer should be redirected to My Account page.
+Customer should be redirected to Dashboard page.
 
 -------------------------
 
 TC-002
-Login with invalid password
+Navigate and Dashboard and verify each specifc card are clickable
 
-Expected:
-Proper error message should appear.
-
--------------------------
-
-TC-003
-Login with invalid email
-
-Expected:
-Authentication should fail.
-
--------------------------
-
-TC-004
-Blank email
-
-Expected:
-Required field validation.
-
--------------------------
-
-TC-005
-Blank password
-
-Expected:
-Required field validation.
-
--------------------------
-
-TC-006
-Blank email and password
-
-Expected:
-Both required field messages.
-
--------------------------
-
-TC-007
-Logout
-
-Expected:
-User should return to Guest state.
+Expected: each specifc card are clickable and navigate to the correct page

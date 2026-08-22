@@ -8,29 +8,19 @@ export class LoginPage {
     }
 
     //locators are separated here for better readability and maintainability
-    signInButton = async () => {
+    signInButton = async (username: string, password: string) => {
         await this.page.getByRole('textbox', { name: 'Username' }).click();
-        await this.page.getByRole('textbox', { name: 'Username' }).fill('admin');
+        await this.page.getByRole('textbox', { name: 'Username' }).fill(username);
         await this.page.getByRole('textbox', { name: 'Password' }).click();
-        await this.page.getByRole('textbox', { name: 'Password' }).fill('admin');
+        await this.page.getByRole('textbox', { name: 'Password' }).fill(password);
         await this.page.getByRole('button', { name: 'Sign In' }).click();
     }
 
-    LoginScreenInputfields = async (username: string, password: string) => {
-        await this.page.getByRole('textbox', { name: 'Email *' }).click();
-        await this.page.getByRole('textbox', { name: 'Email *' }).fill(username);
-        await this.page.waitForTimeout(2000);
-        await this.page.getByRole('textbox', { name: 'Password * Password *' }).click();
-        await this.page.getByRole('textbox', { name: 'Password * Password *' }).fill(password);
-        await this.page.waitForTimeout(2000);
-        await this.page.getByRole('button', { name: 'Sign In' }).click();
-        await this.page.waitForTimeout(2000);
-    }
 
-    CreateAccountButton = async () => {
-        await this.page.getByRole('link', { name: 'My Account' }).click();
-        await this.page.getByRole('link', { name: 'Create an Account' }).click();
-    }
+    // CreateAccountButton = async () => {
+    //     await this.page.getByRole('link', { name: 'My Account' }).click();
+    //     await this.page.getByRole('link', { name: 'Create an Account' }).click();
+    // }
 
     //functions are added in this section.
     async goToLoginPage() {
@@ -39,15 +29,15 @@ export class LoginPage {
     }
 
     async signIn(username: string, password: string){
-        await this.signInButton();
-        //await this.page.pause();
+        await this.signInButton(username, password);
+        // Give the application time to navigate
+        await this.page.waitForLoadState('networkidle');
         console.log('[INFO] redirecting to SignIn page...');
-        //await this.LoginScreenInputfields(username, password);
     }
 
-    async createAccount(){
-        await this.CreateAccountButton();
-        console.log('[INFO] redirecting to Create Account page...');
-    }
+    // async createAccount(){
+    //     await this.CreateAccountButton();
+    //     console.log('[INFO] redirecting to Create Account page...');
+    // }
 
 }
